@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/views/Takeimage/static/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <p><span class="paw">🐾</span> PawScan</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/home#tutorial">How It Works</a></li>
+                <li><a href="/history">My Scans</a></li>
+                <li><a href="/logout" class="active">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <form action="/predict" method="POST" class="addImagePred" enctype="multipart/form-data">
+                <div class="imgInsert">
+                    <label for="getImg">
+                        <img src="/views/Asset/addImg.png" alt="plus img" class="uploadImage">
+                    </label>
+                    <input type="file" name="getImg" id="getImg" style="display: none;" accept="image/*" onchange="preview_image(event)">
+                    <div class="submit">
+                        <h1>Upload Image</h1>
+                        <input type="submit" value="submit">
+                        <a href="/home">Back</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer class="footer-section">
+        <div class="footer-content">
+            <div class="logo-container">
+                <h1>
+                    🐾PawScan
+                </h1>
+            </div>
+            <div class="footer-menu">
+                <h3>Main Menu</h3>
+                <ul>
+                    <li><a href="/home#intro">Home</a></li>
+                    <li><a href="/home#tutorial">Service</a></li>
+                    <li><a href="/history">My Scans</a></li>
+                </ul>
+            </div>
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p><span class="icon">&#128222;</span> +62 123 456 7890</p>
+                <br>
+                <p><span class="icon">&#128205;</span> Jl. Pahlawan Seribu No.123, Tangerang Selatan – Banten, 15310</p>
+                <br>
+                <div class="social-icons">
+                    <a href="#"><img src="/views/Asset/Facebook.png" alt="Facebook" class="social-icon"></a>
+                    <a href="#"><img src="/views/Asset/Instagram.png" alt="Instagram" class="social-icon"></a>
+                    <a href="#"><img src="/views/Asset/X.png" alt="Twitter" class="social-icon"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 PawScan| All rights reserved</p>
+        </div>
+    </footer>
+    <script src="/views/Takeimage/static/script.js"></script>
+</body>
+</html>
